@@ -12,7 +12,7 @@
                 window.location.replace(newUrl);
             }
         }
-        window.onload = redirectIfNeeded;
+        document.addEventListener("DOMContentLoaded", redirectIfNeeded);
     </script>
 </head>
 <body>
