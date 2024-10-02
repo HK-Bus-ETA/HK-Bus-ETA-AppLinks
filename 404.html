@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="0; url='https://wear.hkbus.app'" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script type="text/javascript">
+        function redirectIfNeeded() {
+            let currentPath = window.location.pathname;
+            if (currentPath.startsWith('/') && !window.location.hash) {
+                let newUrl = './#' + currentPath.substring(1);
+                window.location.replace(newUrl);
+            }
+        }
+        window.onload = redirectIfNeeded;
+    </script>
 </head>
 <body>
-<p>Loading...</p>
+    <p>Redirecting...</p>
 </body>
 </html>
