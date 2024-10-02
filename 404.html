@@ -8,7 +8,7 @@
         function redirectIfNeeded() {
             let currentPath = window.location.pathname;
             if (currentPath.startsWith('/') && !window.location.hash) {
-                let newUrl = './#' + currentPath.substring(1);
+                let newUrl = '/#' + currentPath;
                 window.location.replace(newUrl);
             }
         }
