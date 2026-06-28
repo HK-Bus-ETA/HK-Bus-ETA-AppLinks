@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script type="text/javascript">
+        function redirectIfNeeded() {
+            let currentPath = window.location.pathname;
+            if (currentPath.startsWith('/') && !window.location.hash) {
+                let newUrl = '/#' + currentPath;
+                window.location.replace(newUrl);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", redirectIfNeeded);
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
